@@ -1,0 +1,5 @@
+const CHENGE_LOGIN_STATUS_FALSE = "@loginTypes/CHENGE_LOGIN_STATUS_FALSE";
+
+export default {
+  CHENGE_LOGIN_STATUS_FALSE,
+};
