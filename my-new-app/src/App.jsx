@@ -11,6 +11,7 @@ import AddNewTask from "./views/AddNewTask";
 import TasksByCategory from "./views/TasksByCategory";
 
 export default function App() {
+  console.log("fgh");
   return (
     <div className="App">
       <BrowserRouter>
@@ -24,7 +25,7 @@ export default function App() {
               <Route path="*" element={<Navigate to="tasksByCategory" />} />
             </Route>
             <Route path="mainBlock" element={<MainBlock />} />
-            <Route path="addMember" element={<AddNewMember />} />
+            <Route path="addMember"  element={<AddNewMember />} />
             <Route path="addProject" element={<AddNewProject />} />
             <Route path="*" element={<Navigate to="mainBlock" />} />
           </Route>
