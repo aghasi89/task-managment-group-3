@@ -14,7 +14,6 @@ export const tasksListSelector = (state) => {
 };
 
 export const mainPageSelector = (state) => {
-    tasks
     return {
         logerMember: state.logerMember,
         members: state.mambers,
