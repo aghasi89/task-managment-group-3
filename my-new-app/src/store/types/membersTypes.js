@@ -1,0 +1,13 @@
+const ADD_NEW_MEMBER = "@membersTypes/ADD_NEW_MEMBER";
+const ADD_MEMBER_FAILURE = "@membersTypes/ADD_MEMBER_FAILURE";
+const GET_MEMBERS = "@membersTypes/GET_MEMBERS";
+const DELET_MEMBER = "@membersTypes/DELET_MEMBER";
+const DELET_MEMBER_ERROR = "@membersTypes/DELET_MEMBER_ERROR";
+
+export default {
+  ADD_NEW_MEMBER,
+  ADD_MEMBER_FAILURE,
+  GET_MEMBERS,
+  DELET_MEMBER,
+  DELET_MEMBER_ERROR
+};
