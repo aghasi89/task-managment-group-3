@@ -1,0 +1,23 @@
+.ProjectsBlock {
+  width: 100%;
+  border: greenyellow solid 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+.addNewProject {
+  text-decoration: none;
+  width: 60px;
+  height: 50px;
+  border: greenyellow solid 4px;
+  font-size: 12px;
+  border-radius: 5px;
+  background: rgb(217, 248, 170);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: green;
+  box-shadow: red 0 0 10px;
+}

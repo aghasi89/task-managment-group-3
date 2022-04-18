@@ -1,0 +1,38 @@
+.addProjectContener {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+.newProjectForm {
+  width: 500px;
+  border: greenyellow solid 4px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: red 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background: rgb(217, 248, 170);
+  color: green;
+  font-size: 25px;
+}
+.newProjectName {
+  margin-top: 20px;
+  font-size: 16px;
+}
+.newProjectADD {
+  text-decoration: none;
+  color: green;
+  width: 50px;
+  height: 25px;
+  border-radius: 5px;
+  box-shadow: red 0 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  background-color: greenyellow;
+  margin-top: 10px;
+}

@@ -1,0 +1,22 @@
+.project{
+  margin:0 10px;
+  width: 60px;
+  height: 50px;
+  background: aqua;
+  border: rgb(0, 204, 255) solid 4px;
+  border-radius: 5px;
+  box-shadow: grey 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: blue;
+}
+.projectName{
+  font-size: 12px;
+}
+.projectID{
+  font-size: 10px;
+  color: grey;
+}
