@@ -1,9 +1,11 @@
 .memberbarr {
+  width: 100%;
   margin-top: 10px;
   font-size: 14px;
   color: purple;
   display: flex;
   align-items: center;
+  position: relative;
 }
 .memberInitial {
   margin-left: 5%;
@@ -17,3 +19,47 @@
   justify-content: center;
   align-items: center;
 }
+.xButton{
+  cursor: pointer;
+  background: white;
+  width: 20px;
+  height: 20px;
+  border: blue solid 1px;
+  color: red;
+  position: absolute;
+  right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.deletMemberMoadal{
+  background: white;
+  font-size: 15px;
+  width: 120px;
+  height: 50px;
+  box-shadow: grey 0 0 10px;
+  color: blueviolet;
+  border-radius: 5px;
+  position: absolute;
+  right: -125px;
+  bottom:-50px;
+}
+
+.noYesBlock{
+  display: flex;
+  padding: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.YesNoButton{
+  cursor: pointer;
+  width: 40px;
+  height: 20px;
+  background: blue;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+

@@ -1,9 +1,15 @@
 const SET_NEW_PROJECT = "@projectsTypes.js/SET_NEW_PROJECT";
 const ASK_FOR_PROJECTS = "@projectsTypes.js/ASK_FOR_PROJECTS";
 const GET_PROJECTS = "@projectsTypes.js/GET_PROJECTS";
+const SET_CURRENT_PROJECT = "@projectsTypes.js/SET_CURRENT_PROJECT";
+const GET_CURRENT_PROJECT = "@projectsTypes.js/GET_CURRENT_PROJECT";
+const DELETE_PROJECT = "@projectsTypes.js/DELETE_PROJECT";
 
 export default {
   SET_NEW_PROJECT,
   ASK_FOR_PROJECTS,
-  GET_PROJECTS
+  GET_PROJECTS,
+  SET_CURRENT_PROJECT,
+  GET_CURRENT_PROJECT,
+  DELETE_PROJECT
 };

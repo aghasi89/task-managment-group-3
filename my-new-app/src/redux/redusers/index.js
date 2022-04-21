@@ -1,9 +1,18 @@
 const initial_state = {
   logedMember: {
-    name: null
+    name: 'X'
   },
-  members: [],
-  projects: []
+  tasks:[],
+  members: [{
+    name:"",
+    password:"",
+    email:"",
+  }],
+  projects: [],
+  currentProject: {
+    name:"",
+    id:""
+  }
 };
 
 export default function reduser(state = initial_state, action) {
@@ -48,6 +57,16 @@ export default function reduser(state = initial_state, action) {
       return {
         ...state,
         projects: action.payload
+      };
+    case "@projectsTypes.js/GET_CURRENT_PROJECT":
+      return {
+        ...state,
+        currentProject: action.payload
+      };
+  case "@TasksTypes.js/GET_TASKS":
+      return {
+        ...state,
+        tasks: action.payload
       };
     default:
       return state;

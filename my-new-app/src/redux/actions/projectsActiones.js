@@ -19,3 +19,25 @@ export const getProjects = (projects) => {
     payload: projects
   };
 };
+
+export const setCuuentProject = (project) => {
+  return {
+    type: projectsTypes.SET_CURRENT_PROJECT,
+    payload: project
+  };
+};
+
+export const getCuuentProject = (project) => {
+  return {
+    type: projectsTypes.GET_CURRENT_PROJECT,
+    payload: project
+  };
+};
+
+export const deleteProject = (project) => {
+  return {
+    type: projectsTypes.DELETE_PROJECT,
+    payload: project
+  };
+};
+

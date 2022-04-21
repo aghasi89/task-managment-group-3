@@ -2,9 +2,11 @@ import { takeLatest, put, call } from "redux-saga/effects";
 import logtypes from "../actionsTypes/logTypes";
 import membersTypes from "../actionsTypes/membersTypes";
 import projectsTypes from "../actionsTypes/projectsTypes";
+import { tasksTaypes } from "../actionsTypes";
 import logActiones from "../actions";
 import membersActions from "../actions";
 import projectsActions from "../actions";
+import actions from "../actions";
 
 
 
@@ -115,14 +117,169 @@ export function* warkerSetProjects(action) {
   console.log(projects, "saga end");
   yield localStorage.setItem("projects", JSON.stringify(projects));
 }
-export function* warkerGetProjects(action){
-let projects = [];
+export function* warkerGiveProjects(action) {
+  let projects = [];
   if (localStorage.getItem("projects") !== null) {
     projects = JSON.parse(localStorage.getItem("projects"));
   }
-  let NewAction=projectsActions.projectsActiones.getProjects(projects)
-console.log(NewAction,"SAGA END")
-yield put(NewAction)
+  let NewAction = projectsActions.projectsActiones.getProjects(projects)
+  yield put(NewAction)
+}
+export function* warkerAddNewtask(action) {
+  console.log("SAGA RECIVE", action)
+  let tasks = [];
+  if (localStorage.getItem("tasks") !== null) {
+    tasks = JSON.parse(localStorage.getItem("tasks"));
+  }
+  let taskID;
+  let isIDExist = true;
+  while (isIDExist) {
+    taskID = Math.floor(Math.random() * 100000);
+    isIDExist = tasks.find((item) => {
+      if (item.ID === taskID) {
+        return true;
+      }
+      return false;
+    });
+  }
+  const newTask = {
+    ID: taskID,
+    projectID: action.payload.projectID,
+    name: action.payload.name,
+    dedline: action.payload.dedline,
+    excutor: action.payload.taskExecutor,
+    status: "NEW TASK",
+    comments: [],
+  }
+  tasks.push(newTask)
+  yield localStorage.setItem("tasks", JSON.stringify(tasks));
+  const newAction = actions.tasksActions.getTasks(tasks);
+  console.log("SAGA SEND", tasks, newAction)
+  yield put(newAction)
+}
+
+export function* warkerGetTasks(action) {
+  let tasks = [];
+  if (localStorage.getItem("tasks") !== null) {
+    tasks = JSON.parse(localStorage.getItem("tasks"));
+  }
+  const newAction = actions.tasksActions.getTasks(tasks)
+  yield put(newAction);
+}
+
+export function* warkerChengeStatus(action) {
+  let tasks = [];
+  if (localStorage.getItem("tasks") !== null) {
+    tasks = JSON.parse(localStorage.getItem("tasks"));
+  }
+
+  let payloadID = action.payload.task.ID
+  let index = tasks.findIndex((item) => {
+    return item.ID === payloadID
+  })
+  let task = tasks[index];
+  task = {
+    ...task,
+    status: action.payload.newStatus
+  }
+  tasks.splice(index, 1, task)
+  yield localStorage.setItem("tasks", JSON.stringify(tasks));
+  const newAction = actions.tasksActions.getTasks(tasks)
+  yield put(newAction);
+}
+
+export function* warkerDeletTask(action) {
+  let tasks = [];
+  if (localStorage.getItem("tasks") !== null) {
+    tasks = JSON.parse(localStorage.getItem("tasks"));
+  }
+  let index = tasks.findIndex((item) => {
+    return item.ID === action.payload.ID
+  })
+  tasks.splice(index, 1)
+  yield localStorage.setItem("tasks", JSON.stringify(tasks));
+  const newAction = actions.tasksActions.getTasks(tasks)
+  console.log("SAGA SEND", newAction)
+  yield put(newAction);
+}
+
+export function* warkerSetCurrentProject(action) {
+
+  console.log("SAGA RECIVE", action)
+
+  let tasks = [];
+  if (localStorage.getItem("tasks") !== null) {
+    tasks = JSON.parse(localStorage.getItem("tasks"));
+  }
+  let newAction = actions.tasksActions.getTasks(tasks)
+
+  yield put(newAction)
+  newAction = actions.projectsActiones.getCuuentProject(action.payload)
+
+  yield put(newAction)
+}
+
+export function* warkerAddcomment(action) {
+  let tasks = [];
+  if (localStorage.getItem("tasks") !== null) {
+    tasks = JSON.parse(localStorage.getItem("tasks"));
+  }
+  let index = tasks.findIndex((item) => {
+    return item.ID === action.payload.task.ID
+  })
+  tasks[index].comments.push(action.payload.commentText)
+  yield localStorage.setItem("tasks", JSON.stringify(tasks));
+  let newAction = actions.tasksActions.getTasks(tasks)
+  yield put(newAction)
+
+}
+
+export function* warkerDeletProject(action) {
+  let projects = [];
+  if (localStorage.getItem("projects") !== null) {
+    projects = JSON.parse(localStorage.getItem("projects"));
+  }
+
+  let index = projects.findIndex((item) => {
+    return item.ID === action.payload.ID
+  })
+
+  projects.splice(index, 1)
+  yield localStorage.setItem("projects", JSON.stringify(projects));
+}
+
+export function* warkerDeleteTasksOfProject(action) {
+  let tasks = [];
+  if (localStorage.getItem("tasks") !== null) {
+    tasks = JSON.parse(localStorage.getItem("tasks"));
+  }
+
+  for (let i = 0; i < tasks.length; i++) {
+    let index = tasks.findIndex((item) => {
+      return item.projectID === action.payload
+    })
+    console.log(index, "INDEX")
+    if (index === -1) {
+      break
+    }
+    tasks.splice(index, 1)
+    i = index - 1
+  }
+  yield localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+export function* warkerDeleteMember(action) {
+  let members = [];
+  if (localStorage.getItem("members") !== null) {
+    members = JSON.parse(localStorage.getItem("members"));
+  }
+const index=members.findIndex((item)=>{
+ return item.password===action.payload
+})
+members.splice(index,1)
+yield localStorage.setItem("members", JSON.stringify(members));
+let NewAction = actions.membersActions.getMembers(members);
+yield put(NewAction);
 }
 
 export function* LoginSaga() {
@@ -138,5 +295,14 @@ export function* LoginSaga() {
     warkerGetMemberFaluerDelet
   );
   yield takeLatest(projectsTypes.SET_NEW_PROJECT, warkerSetProjects);
-  yield takeLatest(projectsTypes.ASK_FOR_PROJECTS, warkerGetProjects);
+  yield takeLatest(projectsTypes.SET_CURRENT_PROJECT, warkerSetCurrentProject);
+  yield takeLatest(projectsTypes.ASK_FOR_PROJECTS, warkerGiveProjects);
+  yield takeLatest(tasksTaypes.ADD_NEW_TASK, warkerAddNewtask);
+  yield takeLatest(tasksTaypes.ASK_FOR_TASKS, warkerGetTasks);
+  yield takeLatest(tasksTaypes.CHENGE_TASK_STATUS, warkerChengeStatus);
+  yield takeLatest(tasksTaypes.DELETE_TASK, warkerDeletTask);
+  yield takeLatest(tasksTaypes.ADD_COMMENT, warkerAddcomment);
+  yield takeLatest(projectsTypes.DELETE_PROJECT, warkerDeletProject);
+  yield takeLatest(tasksTaypes.DELETE_ALL_TASKS_OF_PROJECT, warkerDeleteTasksOfProject);
+  yield takeLatest(membersTypes.DELETE_MEMBER, warkerDeleteMember);
 }

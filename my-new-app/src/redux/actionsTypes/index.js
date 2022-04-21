@@ -1,7 +1,6 @@
 import logTypes from "./logTypes";
 import membersTypes from "./membersTypes";
 import projectsTypes from "./projectsTypes";
-//import projectsTypes from "./projectsTypes";
-//import tasksTypes from "./tasksTypes";
+import tasksTaypes from './tasksTaypes'
 
-export { logTypes, membersTypes, projectsTypes };
+export { logTypes, membersTypes, projectsTypes,tasksTaypes };

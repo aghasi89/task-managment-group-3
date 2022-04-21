@@ -1,4 +1,5 @@
 .project{
+  margin: 10px;
   width:60px;
   height: 50px;
   background: aquamarine;
@@ -11,4 +12,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.projectDedline{
+  font-size: 10px;
+  color: blue;
+}
+.projectID{
+  font-size: 10px;
+  color: gray;
 }

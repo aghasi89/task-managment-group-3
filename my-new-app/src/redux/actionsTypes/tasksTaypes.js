@@ -1,0 +1,18 @@
+const ADD_NEW_TASK = "@TasksTypes.js/ADD_NEW_TASK";
+const GET_TASKS= "@TasksTypes.js/GET_TASKS";
+const ASK_FOR_TASKS= "@TasksTypes.js/ASK_FOR_TASKS";
+const CHENGE_TASK_STATUS= "@TasksTypes.js/CHENGE_TASK_STATUS";
+const DELETE_TASK= "@TasksTypes.js/DELETE_TASK";
+const ADD_COMMENT= "@TasksTypes.js/ADD_COMMENT";
+const DELETE_ALL_TASKS_OF_PROJECT= "@TasksTypes.js/DELET_ALL_TASKS_OF_PROJECT";
+
+
+export default {
+  ADD_NEW_TASK,
+  GET_TASKS,
+  ASK_FOR_TASKS,
+  DELETE_TASK,
+  CHENGE_TASK_STATUS,
+  ADD_COMMENT,
+  DELETE_ALL_TASKS_OF_PROJECT
+};

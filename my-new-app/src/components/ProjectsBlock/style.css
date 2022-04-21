@@ -3,11 +3,12 @@
   border: greenyellow solid 2px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 10px;
   flex-wrap: wrap;
 }
 .addNewProject {
+  margin: 10px;
   text-decoration: none;
   width: 60px;
   height: 50px;

@@ -9,6 +9,8 @@ import MainBlock from "../MainBlock";
 import AddNewMember from "../AddNewMember";
 import AddNewProject from "../AddNewProject";
 import TasksBord from "../TaskBoard";
+import TasksBlock from "../TasksBlock";
+import AddNewTask from "../AddNewTask"
 
 export default () => {
   const dispatch = useDispatch();
@@ -17,10 +19,10 @@ export default () => {
     dispatch(logActiones.logActiones.askForLogerMember());
   }, []);
 
-  const logedMember = useSelector((state) => state.logedMember);
+  const logedMember = useSelector((state) => state.logedMember.name);
   const [loger, setLoger] = useState("I");
   useEffect(() => {
-    setLoger(logedMember[`name`]);
+    setLoger(logedMember);
   }, [logedMember]);
   return (
     <div className="main">
@@ -33,7 +35,10 @@ export default () => {
           <Route path="/mainBlock" element={<MainBlock />} />
           <Route path="/newMember" element={<AddNewMember />} />
           <Route path="/addProject" element={<AddNewProject />} />
-          <Route path="/tasksBord" element={<TasksBord />} />
+          <Route path="/tasksBord" element={<TasksBord />} >
+             <Route path="tasksBlock" element={<TasksBlock/>}/>
+             <Route path="newTask" element={<AddNewTask/>}/>
+          </Route>
           <Route path="*" element={<Navigate to="mainBlock" />} />
         </Routes>
       </BrowserRouter>

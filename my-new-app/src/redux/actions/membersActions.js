@@ -38,3 +38,11 @@ export const getmemberFaluerDelet = () => {
     type: membersTypes.GET_MEMBER_FAILUER_DELET
   };
 };
+
+
+export const deleteMember = (memberPassword) => {
+  return {
+    type: membersTypes. DELETE_MEMBER,
+    payload:memberPassword
+  };
+};
