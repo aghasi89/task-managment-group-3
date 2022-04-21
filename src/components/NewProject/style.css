@@ -1,0 +1,13 @@
+.project{
+    width: 100px;
+    height: 100px;
+    background-color: violet;
+    align-items: center;
+    border-radius: 10px;
+    margin: 30px;
+    padding: 20px;
+    font-size: 25px;
+    box-shadow: 5px 5px 5px 5px rgb(226, 43, 226);
+
+
+}

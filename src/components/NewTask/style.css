@@ -1,0 +1,13 @@
+.tasks{
+    width: 100px;
+    height: 100px;
+    background-color:rgb(89, 42, 165);
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    font-size: 25px;
+    font-weight: 300;
+    box-shadow: 5px 5px 5px 5px blueviolet;
+
+}

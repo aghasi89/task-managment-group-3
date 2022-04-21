@@ -1,0 +1,53 @@
+.login {
+    width: 80px;
+    height: 40px;
+    background-color: aqua;
+    border-radius: 20px;
+    margin: 10px;
+  }
+  .logout {
+    width: 80px;
+    height: 40px;
+    background-color: aqua;
+    border-radius: 20px;
+  }
+  .avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    color: white;
+    margin-right: 20px;
+  }
+  .user-info-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+  }
+  .inputs{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+  .password{
+    margin: 10px;
+  }
+  .name{
+    margin: 10px;
+  }
+  .add {
+    height: 50px;
+    width: 250px;
+    border-radius: 50px;
+    background-color: cadetblue;
+    border: 1px solid black;
+    font-size:20px;
+  }
+  
+  
