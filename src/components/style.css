@@ -1,16 +1,4 @@
-.login {
-    width: 80px;
-    height: 40px;
-    background-color: aqua;
-    border-radius: 20px;
-    margin: 10px;
-  }
-  .logout {
-    width: 80px;
-    height: 40px;
-    background-color: aqua;
-    border-radius: 20px;
-  }
+
   .avatar {
     height: 50px;
     width: 50px;
@@ -38,16 +26,6 @@
   .password{
     margin: 10px;
   }
-  .name{
-    margin: 10px;
-  }
-  .add {
-    height: 50px;
-    width: 250px;
-    border-radius: 50px;
-    background-color: cadetblue;
-    border: 1px solid black;
-    font-size:20px;
-  }
+  
   
   
