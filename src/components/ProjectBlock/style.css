@@ -1,0 +1,13 @@
+.proj{
+    
+height: 100%;
+    border: blueviolet solid 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 10px;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    background-color: rgb(231, 213, 248);
+
+}
