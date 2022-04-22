@@ -5,8 +5,8 @@ import projectsReduser from "./projectsReduser";
 import tasksReduser from "./tasksReduser";
 
 export default combineReducers({
-  logReduser:logReducer,
-  membersReduser:membersReduser,
-  projectsReduser :projectsReduser,
-  tasksReduser:tasksReduser
+  log:logReducer,
+  members:membersReduser,
+  projects:projectsReduser,
+  tasks:tasksReduser
 })

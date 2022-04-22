@@ -1,5 +1,5 @@
 .mambersBlock {
-  min-width: 120px;
+  min-width: 200px;
   max-width: 30%;
   height: 100%;
   background: #c2ebeb;
@@ -7,6 +7,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  min-height: 770px;
 }
 .membersBlock__top {
   width: 100%;

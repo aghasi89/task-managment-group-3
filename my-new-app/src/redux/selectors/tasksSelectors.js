@@ -1,3 +1,3 @@
 export const tasksSeector = (state) => {
-  return state.tasksReduser.tasks
+  return state.tasks.tasks
 };

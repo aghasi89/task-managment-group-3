@@ -1,12 +1,12 @@
 .login__contener {
   background: url(../../asets/img/loginBG.jpg);
-  background-size: contain;
+  background-size: cover;
   width: 100%;
-  padding-top: 50px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding: 175px 0;
 }
 .LoginForm {
   opacity: 0.7;

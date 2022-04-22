@@ -1,12 +1,12 @@
 export const projectsSelector = (state) => {
-  return state.projectsReduser.projects
+  return state.projects.projects
 };
 
 
 export const currentProjectIDSelector = (state) => {
-  return state.projectsReduser.currentProject.ID
+  return state.projects.currentProject.ID
 };
 
 export const currentProjectSelector = (state) => {
-  return state.projectsReduser.currentProject
+  return state.projects.currentProject
 };

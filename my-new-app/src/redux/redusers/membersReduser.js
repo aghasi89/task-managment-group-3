@@ -1,18 +1,9 @@
 const initial_state = {
-  logedMember: {
-    name: 'X'
-  },
-  tasks:[],
   members: [{
     name:"",
     password:"",
     email:"",
   }],
-  projects: [],
-  currentProject: {
-    name:"",
-    id:""
-  }
 };
 
 export default function logReducer(state = initial_state, action) {
