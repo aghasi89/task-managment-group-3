@@ -1,3 +1,3 @@
 export const tasksSeector = (state) => {
-  return state.tasks.tasks
+  return state.tasks
 };

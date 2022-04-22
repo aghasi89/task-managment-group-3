@@ -1,4 +1,5 @@
 const initial_state = {
+  addmemberError:null,
   members: [{
     name:"",
     password:"",

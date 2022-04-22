@@ -1,13 +1,4 @@
 const initial_state = {
-  logedMember: {
-    name: 'X'
-  },
-  tasks:[],
-  members: [{
-    name:"",
-    password:"",
-    email:"",
-  }],
   projects: [],
   currentProject: {
     name:"",
