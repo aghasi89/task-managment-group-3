@@ -1,7 +1,9 @@
 import { useCallback, useRef } from "react";
 import "./style.css";
-import logActiones from "../../redux/actions";
+import actions from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
+import { logFailuerSelector } from "../../redux/selectors/logSelectors";
+import loginBG from "../../asets/img/loginBG.jpg"
 
 export default () => {
   const emailImput = useRef(null);
@@ -13,11 +15,11 @@ export default () => {
       email: emailImput.current.value,
       password: passwordImput.current.value
     };
-    const action = logActiones.logActiones.login(payload);
+    const action = actions.logActiones.login(payload);
     dispatch(action);
   }, []);
 
-  const failuer = useSelector((store) => store.logSinFailuerMesage);
+  const failuer = useSelector(logFailuerSelector);
   return (
     <div className="login__contener">
       <form className="LoginForm">
@@ -25,7 +27,7 @@ export default () => {
           Time Tasks Menehger <br />
           Login Page
         </div>
-        <label htmlfor="login__mail" className="Login__label">
+        <label htmlFor="login__mail" className="Login__label">
           Enter your email
           <input
             ref={emailImput}
@@ -35,7 +37,7 @@ export default () => {
             v
           />
         </label>
-        <label htmlfor="loginPasword" className="Login__label">
+        <label htmlFor="loginPasword" className="Login__label">
           Enter your email
           <input
             ref={passwordImput}

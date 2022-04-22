@@ -2,11 +2,12 @@ import { useCallback, useState } from "react";
 import "./style.css";
 import actions from "../../redux/actions";
 import { useDispatch, useSelector, } from "react-redux";
+import  {logedMemberSelector} from "../../redux/selectors/logSelectors"
 
 export default (props) => {
   const dispatch = useDispatch()
   const [deleteModal, setDeleteModal] = useState(false)
-  const logedMember = useSelector(state => state.logedMember)
+  const logedMember = useSelector(logedMemberSelector)
 
   const openCloseDeleteModalHendeler = useCallback(() => {
     setDeleteModal(!deleteModal)
@@ -15,8 +16,7 @@ export default (props) => {
   const deleteMemberHendeler = useCallback(() => {
     setDeleteModal(!deleteModal)
     const newAction = actions.membersActions.deleteMember(props.member.password)
-    console.log('DDDDDDDDDDDDDDDD', logedMember.password,props.member.password)
-    if (!props.member.password === logedMember.password) {
+    if (props.member.password !== logedMember.password) {
       dispatch(newAction)
     }
   }, [deleteModal])

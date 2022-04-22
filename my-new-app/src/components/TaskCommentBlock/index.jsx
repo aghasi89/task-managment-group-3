@@ -2,9 +2,10 @@ import { useCallback, useRef } from "react";
 import "./style.css";
 import actions from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
+import { logedMemberSelector } from "../../redux/selectors/logSelectors";
 
 export default (props)=>{
-const logedMember=useSelector(store=>store.logedMember)
+const logedMember=useSelector(logedMemberSelector)
 console.log(logedMember.name)
 const dispatch=useDispatch()
 const commentText=useRef(null)

@@ -2,10 +2,10 @@
   margin: 10px;
   width:60px;
   height: 50px;
-  background: aquamarine;
-  border-radius: 5px;
+  background: rgb(132, 217, 228);
+  border-radius: 10px;
   border: rgb(0, 140, 255) solid 4px;
-  box-shadow: grey 0 0 10px;
+  box-shadow: rgb(78, 78, 78) 0 0 10px;
   text-decoration: none;
   font-size: 12px;
   display: flex;

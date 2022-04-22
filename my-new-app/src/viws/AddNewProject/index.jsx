@@ -20,7 +20,7 @@ export default () => {
     <div className="addProjectContener">
       <form className="newProjectForm">
         ADD NEW PROJECT
-        <label htmlfor="newProjectName" className="newProjectName">
+        <label htmlFor="newProjectName" className="newProjectName">
           Project name
         </label>
         <input ref={projectName}
@@ -29,7 +29,7 @@ export default () => {
           name="newProjectName"
           id="newProjectName"
         />
-        <label htmlfor="newProjectDedline" className="newProjectName">
+        <label htmlFor="newProjectDedline" className="newProjectName">
           Project dedline
         </label>
         <input ref={projectDedline}

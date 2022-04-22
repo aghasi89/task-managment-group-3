@@ -1,8 +1,7 @@
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useState } from "react";
 import "./style.css";
 import actions from "../../redux/actions";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
 import StatusList from "../StatusList";
 import TaskCommentBlock from "../TaskCommentBlock";
 import TaskDetails from "../TaskDetails";

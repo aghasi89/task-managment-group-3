@@ -11,6 +11,8 @@ import AddNewProject from "../AddNewProject";
 import TasksBord from "../TaskBoard";
 import TasksBlock from "../TasksBlock";
 import AddNewTask from "../AddNewTask"
+import  {logedMemberSelector} from "../../redux/selectors/logSelectors"
+import mainHeaderBG from "../../asets/img/mainHeaderBG.jpg"
 
 export default () => {
   const dispatch = useDispatch();
@@ -19,10 +21,10 @@ export default () => {
     dispatch(logActiones.logActiones.askForLogerMember());
   }, []);
 
-  const logedMember = useSelector((state) => state.logedMember.name);
+  const logedMember = useSelector(logedMemberSelector);
   const [loger, setLoger] = useState("I");
   useEffect(() => {
-    setLoger(logedMember);
+    setLoger(logedMember.name);
   }, [logedMember]);
   return (
     <div className="main">

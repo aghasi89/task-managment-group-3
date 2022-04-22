@@ -1,9 +1,11 @@
 .ProjectsBlock {
+  background: url(../../asets/img/uutiskuva_1.jpg);
   width: 100%;
   border: greenyellow solid 2px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  background-size:cover;
   padding: 10px;
   flex-wrap: wrap;
 }

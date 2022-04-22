@@ -1,4 +1,6 @@
 .login__contener {
+  background: url(../../asets/img/loginBG.jpg);
+  background-size: contain;
   width: 100%;
   padding-top: 50px;
   display: flex;
@@ -7,9 +9,10 @@
   align-items: center;
 }
 .LoginForm {
+  opacity: 0.7;
   width: 500px;
   height: 400px;
-  background: aquamarine;
+  background: rgb(93, 161, 182);
   border-radius: 10px;
   box-shadow: grey 0 0 10px;
   display: flex;
@@ -19,7 +22,7 @@
 }
 .loginText {
   font-size: 40px;
-  color: blue;
+  color: rgb(36, 36, 68);
 }
 .Login__label {
   margin-top: 30px;
@@ -32,7 +35,7 @@
   margin-top: 40px;
   width: 80px;
   height: 40px;
-  background: blue;
+  background: rgb(46, 46, 107);
   display: flex;
   justify-content: center;
   align-items: center;

@@ -3,15 +3,17 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import actions  from '../../redux/actions';
 import './style.css';
+import { membersSelector } from '../../redux/selectors/membersSelectors';
+import { currentProjectIDSelector } from '../../redux/selectors/projectsSelector';
 
 
 export default () => {
   const dispatch=useDispatch()
-  const members=useSelector(state=>state.members)
+  const members=useSelector(membersSelector)
   const taskName=useRef(null)
   const taskdedline=useRef(null)
   const TaskExecutor=useRef(null)
-  const currentProject=useSelector(state=>state.currentProject.ID)
+  const currentProject=useSelector(currentProjectIDSelector)
   const addNewTaskHendeler=useCallback(()=>{
     const payload={
       name:taskName.current.value,

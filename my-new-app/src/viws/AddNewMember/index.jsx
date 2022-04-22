@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useRef } from "react";
+import { useCallback,  useRef } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import actions from "../../redux/actions";
@@ -24,7 +24,7 @@ export default () => {
     <div className="newMember_contener">
       <form className="newMemberForm">
         <div className="newMemberText">ADD NEW MEMBER</div>
-        <label htmlfor="memberName" className="newMemberName">
+        <label htmlFor="memberName" className="newMemberName">
           Enter name
         </label>
         <input
@@ -34,7 +34,7 @@ export default () => {
           id="memberName"
           className="memberName-input"
         />
-        <label htmlfor="memberName" className="newMemberName">
+        <label htmlFor="memberName" className="newMemberName">
           Enter email
         </label>
         <input
@@ -45,7 +45,7 @@ export default () => {
           className="memberName-input"
         />
 
-        <label htmlfor="memberName" className="newMemberName">
+        <label htmlFor="memberName" className="newMemberName">
           Enter password
         </label>
         <input

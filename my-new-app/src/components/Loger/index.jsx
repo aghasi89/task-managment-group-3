@@ -1,12 +1,12 @@
 import { useCallback, useMemo } from "react";
 import { useDispatch } from "react-redux";
-import logActiones from "../../redux/actions";
+import actions from "../../redux/actions";
 import "./style.css";
 
 export default (props) => {
   const dispatch = useDispatch();
   const logoutHendeler = useCallback(() => {
-    dispatch(logActiones.logActiones.setLogout());
+    dispatch(actions.logActiones.setLogout());
   });
   const initial = useMemo(() => {
     return props.logerName[0];

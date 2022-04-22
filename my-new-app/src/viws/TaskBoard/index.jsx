@@ -4,11 +4,12 @@ import { Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
 import './style.css'
 import actions from "../../redux/actions"
+import { currentProjectSelector } from "../../redux/selectors/projectsSelector";
 
 export default () => {
 
   const dispatch=useDispatch()
-  const currentProject=useSelector(state=>state.currentProject)
+  const currentProject=useSelector(currentProjectSelector)
 
   const deleteProjectHendeler=useCallback(()=>{
     const action1=actions.tasksActions.deleteAllTasksOfProject(currentProject.ID)

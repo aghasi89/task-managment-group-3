@@ -1,13 +1,13 @@
-import { useEffect, useMemo, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import {  useMemo } from "react";
+import {  useSelector } from "react-redux";
 import TasksBarr from "../../components/TasksBarr"
-import actions from "../../redux/actions";
 import "./style.css"
+import { tasksSeector } from "../../redux/selectors/tasksSelectors";
+import { currentProjectSelector } from "../../redux/selectors/projectsSelector";
 
 export default () => {
-  const tasks=useSelector(state=>state.tasks)
-  const currentProject=useSelector(state=>state.currentProject)
+  const tasks=useSelector(tasksSeector)
+  const currentProject=useSelector(currentProjectSelector)
 
   const tasksByProject=useMemo(()=>{
     let x=tasks.filter((item)=>{
