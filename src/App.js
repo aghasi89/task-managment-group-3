@@ -24,7 +24,7 @@ function App() {
       <NewProject />
       <NewTask />
       <StatusList />
-      
+      <TasksBarr/>
      <Task />
      <ProjectBlock />
     </div>
