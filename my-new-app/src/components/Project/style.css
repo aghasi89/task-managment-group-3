@@ -1,0 +1,23 @@
+.project{
+  margin: 10px;
+  width:60px;
+  height: 50px;
+  background: rgb(132, 217, 228);
+  border-radius: 10px;
+  border: rgb(0, 140, 255) solid 4px;
+  box-shadow: rgb(78, 78, 78) 0 0 10px;
+  text-decoration: none;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.projectDedline{
+  font-size: 10px;
+  color: blue;
+}
+.projectID{
+  font-size: 10px;
+  color: gray;
+}

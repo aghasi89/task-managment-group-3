@@ -1,0 +1,19 @@
+const GET_LOGIN_STATUS = "@loginTypes/GET-LOGIN-STATUS";
+const SET_LOGIN_STATUS = "@loginTypes/SET_LOGIN_STATUS";
+const SET_LOGEDMEMBER = "@loginTypes/SET_LOGEDMEMBER";
+const GET_LOGEDMEMBER = "@loginTypes/GET_LOGEDMEMBER";
+const LOGIN = "@loginTypes/LOGIN";
+const LOGIN_FAILURE = "@loginTypes/LOGIN_FAILURE";
+const DELET_LOGIN_ERROR = "@loginTypes/DELET_LOGIN_ERROR";
+const GET_LOGOUT = "@loginTypes/GET_LOGOUT";
+
+export default {
+  GET_LOGIN_STATUS,
+  SET_LOGIN_STATUS,
+  LOGIN,
+  LOGIN_FAILURE,
+  DELET_LOGIN_ERROR,
+  GET_LOGEDMEMBER,
+  SET_LOGEDMEMBER,
+  GET_LOGOUT,
+};

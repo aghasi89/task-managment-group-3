@@ -1,0 +1,15 @@
+const ADD_NEW_PROJECT = "@projectsTypes.js/ADD_NEW_PROJECT";
+const SET_PROJECTS = "@projectsTypes.js/SET_PROJECTS";
+const GET_PROJECTS = "@projectsTypes.js/GET_PROJECTS";
+const SET_CURRENT_PROJECT = "@projectsTypes.js/SET_CURRENT_PROJECT";
+const GET_CURRENT_PROJECT = "@projectsTypes.js/GET_CURRENT_PROJECT";
+const DELETE_PROJECT = "@projectsTypes.js/DELETE_PROJECT";
+
+export default {
+  ADD_NEW_PROJECT,
+  SET_PROJECTS,
+  GET_PROJECTS,
+  SET_CURRENT_PROJECT,
+  GET_CURRENT_PROJECT,
+  DELETE_PROJECT
+};

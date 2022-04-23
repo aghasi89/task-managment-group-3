@@ -1,0 +1,14 @@
+.header {
+  background: url(../../asets/img/mainBG1.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 50px;
+  box-shadow: grey 0 0 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.main-Logo {
+  width: 80px;
+}
