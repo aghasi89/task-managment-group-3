@@ -7,15 +7,13 @@ const initial_state = {
 };
 
 export default function logReducer(state = initial_state, action) {
-  console.log("reduser", action);
   switch (action.type) {
-   
-    case "@projectsTypes.js/GET_PROJECTS":
+    case "@projectsTypes.js/SET_PROJECTS":
       return {
         ...state,
         projects: action.payload
       };
-    case "@projectsTypes.js/GET_CURRENT_PROJECT":
+    case "@projectsTypes.js/SET_CURRENT_PROJECT":
       return {
         ...state,
         currentProject: action.payload

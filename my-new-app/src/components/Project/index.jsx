@@ -7,7 +7,7 @@ import "./style.css";
 export default (props) => {
   const dispatch = useDispatch()
   const currentProjectHendeler = useCallback(() => {
-    dispatch(actions.projectsActiones.setCuuentProject(props.project))
+    dispatch(actions.projectsActiones.getCuuentProject(props.project))
   }, [])
 
   return (

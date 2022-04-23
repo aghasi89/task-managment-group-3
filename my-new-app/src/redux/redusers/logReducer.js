@@ -7,9 +7,8 @@ const initial_state = {
 };
 
 export default function logReducer(state = initial_state, action) {
-  console.log("reduser", action);
   switch (action.type) {
-    case "@loginTypes/RECIVE_LOGIN_STATUS":
+    case "@loginTypes/SET_LOGIN_STATUS":
       return {
         ...state,
         login: action.payload
@@ -19,7 +18,7 @@ export default function logReducer(state = initial_state, action) {
         ...state,
         logIsFailuerMesage: action.payload
       };
-    case "@loginTypes/GET_LOGEDMEMBER":
+    case "@loginTypes/SET_LOGEDMEMBER":
       return {
         ...state,
         logedMember: action.payload

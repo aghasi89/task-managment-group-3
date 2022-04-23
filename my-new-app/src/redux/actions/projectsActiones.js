@@ -1,21 +1,21 @@
 import projectsTypes from "../actionsTypes/projectsTypes";
 
-export const setNewProject = (project) => {
+export const addNewProject = (project) => {
   return {
-    type: projectsTypes.SET_NEW_PROJECT,
+    type: projectsTypes.ADD_NEW_PROJECT,
     payload: project
   };
 };
 
-export const askForProjects = () => {
+export const getProjects = () => {
   return {
-    type: projectsTypes.ASK_FOR_PROJECTS
+    type: projectsTypes.GET_PROJECTS
   };
 };
 
-export const getProjects = (projects) => {
+export const setProjects = (projects) => {
   return {
-    type: projectsTypes.GET_PROJECTS,
+    type: projectsTypes.SET_PROJECTS,
     payload: projects
   };
 };

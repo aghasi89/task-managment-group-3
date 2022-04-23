@@ -3,7 +3,6 @@ import "./style.css";
 import actions from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { logFailuerSelector } from "../../redux/selectors/logSelectors";
-import loginBG from "../../asets/img/loginBG.jpg"
 
 export default () => {
   const emailImput = useRef(null);

@@ -1,14 +1,17 @@
 .newMember_contener {
+  background: url(../../asets/img/AddNewMember.jpg);
+  background-size: cover;
   width: 100%;
-  margin-top: 30px;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  height: 700px;
+  padding-top: 150px;
 }
 .newMemberForm {
   padding: 20px;
   width: 500px;
-  height: 400px;
+  height: 300px;
   background: #318ce7;
   border-radius: 10px;
   box-shadow: blue 0 0 10px;

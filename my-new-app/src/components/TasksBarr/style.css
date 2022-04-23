@@ -1,4 +1,6 @@
 .tasksBarr{
+  background: url(../../asets/img/vertical.jpg);
+background-size: contain;
   width: 20%;
   height: 100%;
   border: rgb(155, 72, 233) solid 2px;

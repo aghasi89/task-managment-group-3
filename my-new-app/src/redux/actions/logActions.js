@@ -14,15 +14,15 @@ export const loginFailuer = (errorMessage) => {
   };
 };
 
-export const askForLogerMember = () => {
+export const getLogerMember = () => {
   return {
-    type: logTypes.ASK_FOR_LOGEDMEMBER
+    type: logTypes.GET_LOGEDMEMBER
   };
 };
 
-export const getLogedMember = (logedMember) => {
+export const setLogedMember = (logedMember) => {
   return {
-    type: logTypes.GET_LOGEDMEMBER,
+    type: logTypes.SET_LOGEDMEMBER,
     payload: logedMember
   };
 };
@@ -33,16 +33,16 @@ export const getLoginStatus = () => {
   };
 };
 
-export const reciveLoginStatus = (loginStatus) => {
+export const setLoginStatus = (loginStatus) => {
   return {
-    type: logTypes.RECIVE_LOGIN_STATUS,
+    type: logTypes.SET_LOGIN_STATUS,
     payload: loginStatus
   };
 };
 
-export const setLogout = () => {
+export const getLogout = () => {
   return {
-    type: logTypes.SET_LOGOUT
+    type: logTypes.GET_LOGOUT
   };
 };
 

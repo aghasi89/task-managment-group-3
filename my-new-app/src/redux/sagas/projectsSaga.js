@@ -2,9 +2,7 @@ import { takeLatest, put,call } from "redux-saga/effects";
 import projectsTypes from "../actionsTypes/projectsTypes";
 import actions from "../actions";
 
-export function* warkerSetProjects(action) {
-  console.log("SAGA RECIVE", action);
-
+export function* warkerAddProjects(action) {
   let projects = [];
   if (localStorage.getItem("projects") !== null) {
     projects = JSON.parse(localStorage.getItem("projects"));
@@ -31,28 +29,23 @@ export function* warkerSetProjects(action) {
   yield localStorage.setItem("projects", JSON.stringify(projects));
 }
 
-export function* warkerSetCurrentProject(action) {
-
-  console.log("SAGA RECIVE", action)
-
+export function* warkerGetCurrentProject(action) {
   let tasks = [];
   if (localStorage.getItem("tasks") !== null) {
     tasks = JSON.parse(localStorage.getItem("tasks"));
   }
   let newAction = actions.tasksActions.getTasks(tasks)
-
   yield put(newAction)
-  newAction = actions.projectsActiones.getCuuentProject(action.payload)
-
+  newAction = actions.projectsActiones.setCuuentProject(action.payload)
   yield put(newAction)
 }
 
-export function* warkerGiveProjects(action) {
+export function* warkerGetProjects(action) {
   let projects = [];
   if (localStorage.getItem("projects") !== null) {
     projects = JSON.parse(localStorage.getItem("projects"));
   }
-  let NewAction = actions.projectsActiones.getProjects(projects)
+  let NewAction = actions.projectsActiones.setProjects(projects)
   yield put(NewAction)
 }
 
@@ -72,8 +65,8 @@ export function* warkerDeletProject(action) {
 
 
 export function* projectsSaga() {
-  yield takeLatest(projectsTypes.SET_NEW_PROJECT, warkerSetProjects);
-  yield takeLatest(projectsTypes.SET_CURRENT_PROJECT, warkerSetCurrentProject);
-  yield takeLatest(projectsTypes.ASK_FOR_PROJECTS, warkerGiveProjects);
+  yield takeLatest(projectsTypes.ADD_NEW_PROJECT, warkerAddProjects);
+  yield takeLatest(projectsTypes.GET_CURRENT_PROJECT, warkerGetCurrentProject);
+  yield takeLatest(projectsTypes.GET_PROJECTS, warkerGetProjects);
   yield takeLatest(projectsTypes.DELETE_PROJECT, warkerDeletProject);
 }

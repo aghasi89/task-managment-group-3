@@ -12,13 +12,12 @@ import TasksBord from "../TaskBoard";
 import TasksBlock from "../TasksBlock";
 import AddNewTask from "../AddNewTask"
 import  {logedMemberSelector} from "../../redux/selectors/logSelectors"
-import mainHeaderBG from "../../asets/img/mainHeaderBG.jpg"
 
 export default () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(logActiones.logActiones.askForLogerMember());
+    dispatch(logActiones.logActiones.getLogerMember());
   }, []);
 
   const logedMember = useSelector(logedMemberSelector);

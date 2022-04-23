@@ -3,7 +3,6 @@ import tasksTaypes from "../actionsTypes/tasksTaypes"
 import actions from "../actions";
 
 export function* warkerAddNewtask(action) {
-  console.log("SAGA RECIVE", action)
   let tasks = [];
   if (localStorage.getItem("tasks") !== null) {
     tasks = JSON.parse(localStorage.getItem("tasks"));
@@ -31,7 +30,6 @@ export function* warkerAddNewtask(action) {
   tasks.push(newTask)
   yield localStorage.setItem("tasks", JSON.stringify(tasks));
   const newAction = actions.tasksActions.getTasks(tasks);
-  console.log("SAGA SEND", tasks, newAction)
   yield put(newAction)
 }
 
@@ -40,7 +38,7 @@ export function* warkerGetTasks(action) {
   if (localStorage.getItem("tasks") !== null) {
     tasks = JSON.parse(localStorage.getItem("tasks"));
   }
-  const newAction = actions.tasksActions.getTasks(tasks)
+  const newAction = actions.tasksActions.setTasks(tasks)
   yield put(newAction);
 }
 
@@ -117,7 +115,7 @@ export function* warkerDeleteTasksOfProject(action) {
 
 export function* tasksSaga() {
   yield takeLatest(tasksTaypes.ADD_NEW_TASK, warkerAddNewtask);
-  yield takeLatest(tasksTaypes.ASK_FOR_TASKS, warkerGetTasks);
+  yield takeLatest(tasksTaypes.GET_TASKS, warkerGetTasks);
   yield takeLatest(tasksTaypes.CHENGE_TASK_STATUS, warkerChengeStatus);
   yield takeLatest(tasksTaypes.DELETE_TASK, warkerDeletTask);
   yield takeLatest(tasksTaypes.ADD_COMMENT, warkerAddcomment);

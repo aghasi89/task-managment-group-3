@@ -13,8 +13,7 @@ export default () => {
       name:projectName.current.value,
       dedline:projectDedline.current.value
     }
-    dispatch(actions.projectsActiones.setNewProject(payload))
-    console.log("okkkkkk",actions.projectsActiones.setNewProject(payload))
+    dispatch(actions.projectsActiones.addNewProject(payload))
   })
   return (
     <div className="addProjectContener">

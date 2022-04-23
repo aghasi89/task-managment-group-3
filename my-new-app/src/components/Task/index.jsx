@@ -8,7 +8,6 @@ export default (props)=>{
      setShowMenu(!showMenu)
    },[showMenu])
    
-console.log(props.task.excutor,"sadfsafsaef")
   return <div className='TaskToDrow'>
     <div className='taskName'> {props.task.name}</div>
     <div>{props.task.excutor}</div>

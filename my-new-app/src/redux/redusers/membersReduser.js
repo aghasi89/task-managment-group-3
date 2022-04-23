@@ -8,10 +8,9 @@ const initial_state = {
 };
 
 export default function logReducer(state = initial_state, action) {
-  console.log("reduser", action);
   switch (action.type) {
    
-    case "@lmembersType.js/GET_MEMBERS":
+    case "@lmembersType.js/SET_MEMBERS":
       return {
         ...state,
         members: action.payload
@@ -21,7 +20,7 @@ export default function logReducer(state = initial_state, action) {
         ...state,
         addNewMemberError: action.payload
       };
-    case "@lmembersType.js/GET_MEMBER_FAILUER_DELET":
+    case "@lmembersType.js/SET_MEMBER_FAILUER_DELET":
       return {
         ...state,
         addNewMemberError: null

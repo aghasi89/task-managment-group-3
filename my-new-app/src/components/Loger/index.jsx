@@ -6,7 +6,7 @@ import "./style.css";
 export default (props) => {
   const dispatch = useDispatch();
   const logoutHendeler = useCallback(() => {
-    dispatch(actions.logActiones.setLogout());
+    dispatch(actions.logActiones.getLogout());
   });
   const initial = useMemo(() => {
     return props.logerName[0];

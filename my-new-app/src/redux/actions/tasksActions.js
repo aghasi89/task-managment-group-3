@@ -16,16 +16,16 @@ export const setNewProject = (task) => {
 
 
 
-export const getTasks = (tasks) => {
+export const setTasks = (tasks) => {
   return {
-    type: tasksTaypes.GET_TASKS,
+    type: tasksTaypes.SET_TASKS,
     payload: tasks
   };
 };
 
-export const askForTasks = () => {
+export const getTasks = () => {
   return {
-    type: tasksTaypes.ASK_FOR_TASKS,
+    type: tasksTaypes.GET_TASKS,
   };
 };
 

@@ -10,11 +10,9 @@ export default () => {
 
   const dispatch=useDispatch()
   const currentProject=useSelector(currentProjectSelector)
-
   const deleteProjectHendeler=useCallback(()=>{
     const action1=actions.tasksActions.deleteAllTasksOfProject(currentProject.ID)
     const action2=actions.projectsActiones.deleteProject(currentProject)
-    console.log("DELET",action2)
     dispatch(action1)
     dispatch(action2)
   },[])

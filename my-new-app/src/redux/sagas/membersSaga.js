@@ -19,7 +19,7 @@ export function* warkerSetMembers(action) {
   if (!checkMember) {
     members.push(action.payload);
     localStorage.setItem("members", JSON.stringify(members));
-    let NewAction = actions.membersActions.getMembers(members);
+    let NewAction = actions.membersActions.setMembers(members);
     yield put(NewAction);
   } else {
     let NewAction = actions.membersActions.addNewMemberFailuer(
@@ -30,13 +30,16 @@ export function* warkerSetMembers(action) {
 }
 
 export function* warkerGetMembers(action) {
-  let members = JSON.parse(localStorage.getItem("members"));
-  let NewAction = actions.membersActions.getMembers(members);
+  let members = [];
+  if (localStorage.getItem("members") !== null) {
+    members = JSON.parse(localStorage.getItem("members"));
+  }
+  let NewAction = actions.membersActions.setMembers(members);
   yield put(NewAction);
 }
 
 export function* warkerGetMemberFaluerDelet(action) {
-  let NewAction = actions.membersActions.getmemberFaluerDelet();
+  let NewAction = actions.membersActions.setmemberFaluerDelet();
   yield call(wait, 3000);
   yield put(NewAction);
 }
@@ -51,13 +54,13 @@ const index=members.findIndex((item)=>{
 })
 members.splice(index,1)
 yield localStorage.setItem("members", JSON.stringify(members));
-let NewAction = actions.membersActions.getMembers(members);
+let NewAction = actions.membersActions.setMembers(members);
 yield put(NewAction);
 }
 
 export function* membersSaga() {
-  yield takeLatest(membersTypes.ASK_FOR_MEMBERS, warkerGetMembers);
+  yield takeLatest(membersTypes.GET_MEMBERS, warkerGetMembers);
   yield takeLatest(membersTypes.ADD_NEW_MEMBER, warkerSetMembers);
-  yield takeLatest(membersTypes.SET_MEMBER_FAILUER_DELET, warkerGetMemberFaluerDelet);
+  yield takeLatest(membersTypes.GET_MEMBER_FAILUER_DELET, warkerGetMemberFaluerDelet);
   yield takeLatest(membersTypes.DELETE_MEMBER, warkerDeleteMember);
 }

@@ -5,12 +5,11 @@ import Project from "../Project";
 import actions from "../../redux/actions";
 import "./style.css";
 import { projectsSelector } from "../../redux/selectors/projectsSelector";
-import mainfine from "../../asets/img/mainfone.jpg"
 
 export default () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(actions.projectsActiones.askForProjects());
+    dispatch(actions.projectsActiones.getProjects());
   },[]);
   const projects=useSelector(projectsSelector)
   

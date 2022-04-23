@@ -1,14 +1,14 @@
 import membersTypes from "../actionsTypes/membersTypes";
 
-export const askForMembers = () => {
+export const getMembers = () => {
   return {
-    type: membersTypes.ASK_FOR_MEMBERS
+    type: membersTypes.GET_MEMBERS
   };
 };
 
-export const getMembers = (members) => {
+export const setMembers = (members) => {
   return {
-    type: membersTypes.GET_MEMBERS,
+    type: membersTypes.SET_MEMBERS,
     payload: members
   };
 };

@@ -13,7 +13,7 @@ export default (props) => {
       newStatus:'NEW TASK'
     }
     const action=actions.tasksActions.chengeTaskStatus(payload)
-    console.log("ACTIONS",action)
+  
     dispatch(action)
   }, [])
 
@@ -24,7 +24,6 @@ export default (props) => {
       newStatus:'TASK IN PROCESS'
     }
     const action=actions.tasksActions.chengeTaskStatus(payload)
-    console.log("ACTIONS",action)
     dispatch(action)
   }, [])
 
@@ -34,7 +33,7 @@ export default (props) => {
       newStatus:'TASK IS ENDED'
     }
     const action=actions.tasksActions.chengeTaskStatus(payload)
-    console.log("ACTIONS",action)
+  
     dispatch(action)
   }, [])
 
@@ -44,7 +43,6 @@ export default (props) => {
       newStatus:'DEBUGGING'
     }
     const action=actions.tasksActions.chengeTaskStatus(payload)
-    console.log("ACTIONS",action)
     dispatch(action)
   }, [])
 
@@ -54,7 +52,6 @@ export default (props) => {
       newStatus:'TASK IS DONE'
     }
     const action=actions.tasksActions.chengeTaskStatus(payload)
-    console.log("ACTIONS",action)
     dispatch(action)
   }, [])
 
