@@ -10,6 +10,8 @@ import NewTask from "./components/NewTask";
 import LoginsButton from "./components/LoginsButton";
 import StatusList from "./components/StatusList";
 import ProjectBlock from "./components/ProjectBlock";
+import Task from "./components/Task";
+import TasksBarr from "./components/TasksBarr";
 function App() {
   return (
     <div className="App">
@@ -22,7 +24,9 @@ function App() {
       <NewProject />
       <NewTask />
       <StatusList />
-      <ProjectBlock />
+      
+     <Task />
+     <ProjectBlock />
     </div>
   );
 }

@@ -1,13 +1,12 @@
 .menu{
-    display: flex;
-    width: 150px;
-    height: 100px;
-    border: grey solid 2px;
-    background: white;
-    border-radius: 5px;
-    box-shadow: 3px 3px 3px 3px gray;
-    align-items: center;
-padding: 10px;
-    
-
+    position: absolute;
+  width: 150px;
+  height: 80px;
+  border: grey solid 2px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: gray 0 0 10px;
+  top: 30px;
+  right: 0;
+  z-index: 10;
 }

@@ -1,12 +1,18 @@
 .add {
     
-    height: 50px;
-    width: 250px;
-    border-radius: 50px;
-    background-color: rgb(95, 116, 160);
-    border: 1px;
-    font-size:20px;
-    box-shadow: 5px 5px 5px rgba(84, 54, 190, 0.541);
-    margin: 40px;
-  }
+  text-decoration: none;
+  margin: 10px;
+  width: 100px;
+  height: 40px;
+  background: blue;
+  border-radius: 5px;
+  box-shadow: rgb(255, 47, 161) 0 0 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 12px;
+  top: 30px;
+}
   
