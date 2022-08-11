@@ -1,0 +1,44 @@
+.addProjectContener {
+  background: url(../../asets/img/AddProjectBG.jpg);
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 150px;
+  height: 700px;
+}
+.newProjectForm {
+  opacity: 0.7;
+  width: 500px;
+  height: 300px;
+  border: greenyellow solid 4px;
+  opacity: 0.;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: red 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background: rgb(217, 248, 170);
+  color: green;
+  font-size: 25px;
+}
+.newProjectName {
+  margin-top: 20px;
+  font-size: 16px;
+}
+.newProjectADD {
+  text-decoration: none;
+  color: green;
+  width: 50px;
+  height: 25px;
+  border-radius: 5px;
+  box-shadow: red 0 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  background-color: greenyellow;
+  margin-top: 10px;
+}

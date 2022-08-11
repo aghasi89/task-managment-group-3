@@ -1,0 +1,49 @@
+.login__contener {
+  background: url(../../asets/img/loginBG.jpg);
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 175px 0;
+}
+.LoginForm {
+  opacity: 0.7;
+  width: 500px;
+  height: 400px;
+  background: rgb(93, 161, 182);
+  border-radius: 10px;
+  box-shadow: grey 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+}
+.loginText {
+  font-size: 40px;
+  color: rgb(36, 36, 68);
+}
+.Login__label {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 50px;
+  justify-content: space-between;
+}
+.login_submit {
+  margin-top: 40px;
+  width: 80px;
+  height: 40px;
+  background: rgb(46, 46, 107);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: grey 0 0 10px;
+  color: white;
+}
+.loginFailuer {
+  margin-top: 10px;
+  color: red;
+}

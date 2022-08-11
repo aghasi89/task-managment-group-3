@@ -1,0 +1,17 @@
+.statusList{
+  opacity: 1;
+  width: 150px;
+  height: 100px;
+  background: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: gray 0 0 10px;
+  position: absolute;
+  left:-155px;
+  top:0;
+}
+.newStatus{
+  height: 19px;
+  border-bottom: grey solid 1px;
+}

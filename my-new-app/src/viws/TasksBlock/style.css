@@ -1,0 +1,12 @@
+
+.TasksBlock{
+  width: 100%;
+  height: 800px;
+  background-color: rgb(235, 212, 235);
+  display: flex;
+}
+.newTasks{
+  width: 20%;
+  height: 100%;
+  border: blueviolet solid 2px;
+}
